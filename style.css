@@ -154,6 +154,24 @@ body {
 	border-radius: 50%;
 	position: absolute;
 	transform: translate(-50%, -50%);
+	pointer-events: none;
+	transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+	transform-origin: 80% 80%;
+}
+.cursor.nav-active {
+	background: rgb(86 124 228 / 70%);
+	transform: scale(2.5);
+}
+.cursor.explore-active {
+	background: white;
+	transform: scale(2.5);
+}
+.cursor-text {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	font-size: 0.5rem;
+	transform: translate(-50%, -50%);
 }
 .scrollmagic-pin-spacer {
 	position: static !important;
