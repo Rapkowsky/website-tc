@@ -13,9 +13,11 @@ body {
 #logo {
 	color: white;
 	font-family: "Abril Fatface";
+	z-index: 100;
 }
 
 .nav-header {
+	position: relative;
 	min-height: 10vh;
 	font-size: 1rem;
 	display: flex;
@@ -25,6 +27,7 @@ body {
 	width: 80%;
 	margin: auto;
 	padding: 2rem 0rem;
+	z-index: 2;
 }
 .line1,
 .line2 {
@@ -202,4 +205,7 @@ body {
 }
 .scrollmagic-pin-spacer {
 	position: static !important;
+}
+body.hide {
+	overflow: hidden;
 }
