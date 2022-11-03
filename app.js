@@ -1,6 +1,8 @@
 let controller;
 let slideScene;
 let pageScene;
+// Listeners
+window.addEventListener("mousemove", cursorAnimation);
 
 function animateSlides() {
 	// Init controller
@@ -51,4 +53,10 @@ function animateSlides() {
 			.addTo(controller);
 	});
 }
+function cursorAnimation(e) {
+	let mouse = document.querySelector(".cursor");
+	mouse.style.top = e.pageY + "px";
+	mouse.style.left = e.pageX + "px";
+}
+
 animateSlides();
