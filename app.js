@@ -39,11 +39,11 @@ function animateSlides() {
 			reverse: false,
 		})
 			.setTween(slideTl)
-			.addIndicators({
-				colorStart: "white",
-				colorTrigger: "white",
-				name: "slide",
-			})
+			// .addIndicators({
+			// 	colorStart: "white",
+			// 	colorTrigger: "white",
+			// 	name: "slide",
+			// })
 			.addTo(controller);
 		// New animation
 		const pageTl = gsap.timeline();
@@ -59,12 +59,12 @@ function animateSlides() {
 			duration: "100%",
 			triggerHook: 0,
 		})
-			.addIndicators({
-				colorStart: "white",
-				colorTrigger: "white",
-				name: "page",
-				indent: 200,
-			})
+			// .addIndicators({
+			// 	colorStart: "white",
+			// 	colorTrigger: "white",
+			// 	name: "page",
+			// 	indent: 200,
+			// })
 
 			//{ pushFollowers: false } helps get rid of the empty space and start the nast slide animation
 			.setPin(slide, { pushFollowers: false })
@@ -159,7 +159,7 @@ barba.init({
 				const tl = gsap.timeline({ defaults: { ease: "power2.inOut" } });
 				tl.fromTo(".swipe", 0.75, { x: "0%" }, { x: "100%", stagger: 0.15, onComplete: done });
 				tl.fromTo(next.container, 1, { opacity: 0 }, { opacity: 1 });
-				tl.fromTo(".nav-header", 2, { y: "-100%" }, { y: "0%", ease: "power2.inOut" }, "-=1.5");
+				tl.fromTo(".nav-header", 1.5, { y: "-80%" }, { y: "0%", ease: "power2.inOut" }, "-=1.5");
 			},
 		},
 	],
@@ -183,7 +183,7 @@ function detailAnimation() {
 		})
 			.setPin(slide, { pushFollowers: false })
 			.setTween(slideTl)
-			.addTo(controller)
-			.addIndicators({ colorStart: "white", colorTrigger: "white", name: "detailScene", indent: 200 });
+			.addTo(controller);
+		// .addIndicators({ colorStart: "white", colorTrigger: "white", name: "detailScene", indent: 200 });
 	});
 }
