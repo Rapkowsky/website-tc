@@ -5,6 +5,7 @@
 }
 
 body {
+	position: relative;
 	background: #17181a;
 	font-family: "Montserrat", sans-serif;
 	overflow-x: hidden;
@@ -14,6 +15,9 @@ body {
 	color: white;
 	font-family: "Abril Fatface";
 	z-index: 100;
+}
+main {
+	position: absolute;
 }
 
 .nav-header {
@@ -264,4 +268,24 @@ body.hide {
 	bottom: 10%;
 	color: white;
 	opacity: 0.2;
+}
+.swipe {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	transform: translate(-100%);
+}
+.swipe1 {
+	background: rgb(167, 110, 231);
+	z-index: 5;
+}
+.swipe2 {
+	background: rgb(86, 124, 228);
+	z-index: 4;
+}
+.swipe3 {
+	background: rgb(255, 139, 93);
+	z-index: 3;
 }
